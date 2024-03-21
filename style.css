@@ -77,7 +77,7 @@ header {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity */
     display:flex;
-    justify-content: center;
+    justify-content: left;
     align-items: end;
     color: #fff;
     font-size: 20px;
@@ -85,7 +85,8 @@ header {
     text-align: center;
 }
 .overlay-container h4{
-	margin-bottom: 100px;
+	margin-bottom: 80px;
+    margin-left: 40px;
 }
 
 .culture {
@@ -105,5 +106,46 @@ header {
     font-weight: bold;
 	margin-left: 120px;
 	margin-top: 130px;
+}
+.What_to_experience{
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+	margin-left: 120px; 
+	 margin-top: 70px;
+}
+
+.events-container {
+    display: flex;
+    justify-content: space-around; /* Evenly distribute the items with equal space around them */
+    align-items: center;
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 1200px; /* Limit the maximum width of the container */
+}
+
+.Events_home {
+    position: relative; /* Add this to position the overlay container */
+    width: 300px;
+    background-size: cover;
+    display: inline-block;
+    margin: 0 15px; 
+
+    
+}
+
+.event {
+    text-align: center;
+}
+
+.event-image img {
+    border-radius: 3%;
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    max-height: 400px; /* Limit the maximum height of the image */
+    object-fit: cover; /* Ensure the image maintains aspect ratio and covers its container */
+    border: 2px solid #000;
+}
+
+.event-details {
+    margin-top: 10px;
 }
 
