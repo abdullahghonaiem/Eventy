@@ -71,10 +71,11 @@ header {
 }
 .photo-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: start;
     justify-content: start;
     margin-top: 50px;
+	margin-left: 120px;
 }
 
 .big-photo {
@@ -82,22 +83,101 @@ header {
 }
 
 .big-photo img {
+    border-radius: 3%;
     width: 600px; /* Adjust the width of the big photo */
     height: auto;
 }
 
 
-.column {
+.row {
     display: flex;
     flex-direction: row;
 
-    justify-content: center;
+    justify-content: start;
     margin-bottom: 20px;
+    margin-left: 120px;
+
 }
 
 .small-photo img {
+    border-radius: 3%;
+
     width: 200px; /* Adjust the width of the small photos */
     height: auto;
+
     margin-right: 10px; /* Adjust the margin between small photos */
+}
+.column{ display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+    margin-bottom: 20px;
+}
+
+/* Add this CSS to style the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    margin: auto; /* Center horizontally */
+    display: block;
+    max-width: 50%;
+}
+
+
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+ /* Style the left and right buttons in the modal */
+/* Initially hide buttons */
+.photo-button {
+    display: block;
+    position: absolute;
+    background-color: rgb(95, 95, 95);
+    border: none;
+    color: rgb(236, 236, 236);
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1; 
+    top: 50%; /* Position the buttons vertically at 50% of their containing element */
+    padding: 20px 12px; /* Adjust the padding to control the size of the buttons */
+    top: 50%; /* Position the buttons vertically at 50% of their containing element */
+    transform: translateY(-50%); /* Adjust the position to center the buttons vertically */
+}
+
+/* Style the left and right buttons in the modal */
+.left-button {
+    left: 10px; /* Position the left button */
+}
+
+.right-button {
+    right: 10px; /* Position the right button */
 }
 
