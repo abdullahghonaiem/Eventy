@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+	width: 1170px;
+	margin: auto;
+}
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(saudiarabiatourism.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow-y: auto; 
+    height: 40vh; 
+}
+
+.eventy-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1000; 
+}
+
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+
+.nav-area li {
+	display: inline-block;
+}
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+.ALULA_3_DAYS {
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
+	margin-left: 120px;
+	margin-top: 20px;
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+}
+
+.location-container .fa-map-marker {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-right: 5px; /* Add margin to the right of the icon */
+
+}
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-top: 50px;
+}
+
+.big-photo {
+    margin-right: 20px; /* Adjust margin to create space between big photo and smaller photos */
+}
+
+.big-photo img {
+    width: 600px; /* Adjust the width of the big photo */
+    height: auto;
+}
+
+
+.column {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.small-photo img {
+    width: 200px; /* Adjust the width of the small photos */
+    height: auto;
+    margin-right: 10px; /* Adjust the margin between small photos */
+}
+
