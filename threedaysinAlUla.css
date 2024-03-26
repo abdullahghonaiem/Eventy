@@ -50,11 +50,62 @@ header {
 	background: #fff;
 	color: #333;
 }
+footer {
+    position: relative;
+    background-color: #78006E;
+    padding: 20px;
+    }
+    
+    .f_title {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+    }
+    
+    .copy {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    }
+    
+    .right-column {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 10px;
+    align-items: flex-end; /* Align items to the right */
+    }
+    
+    @media screen and (max-width: 768px) {
+    .right-column {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center; /* Center items on smaller screens */
+    }
+    }
+    
+    
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    }
+    
+    @media screen and (max-width: 768px) {
+    .right-column {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    }
 .ALULA_3_DAYS {
     color: #000000;
     font-size: 28px;
     font-weight: bold;
-	margin-left: 120px;
+	margin-left: 40px;
 	margin-top: 20px;
 }
 
@@ -75,7 +126,7 @@ header {
     align-items: start;
     justify-content: start;
     margin-top: 50px;
-	margin-left: 120px;
+	margin-left: 40px;
 }
 
 .big-photo {
@@ -95,7 +146,7 @@ header {
 
     justify-content: start;
     margin-bottom: 20px;
-    margin-left: 120px;
+	margin-left: 40px;
 
 }
 
@@ -180,4 +231,169 @@ header {
 .right-button {
     right: 10px; /* Position the right button */
 }
+.price_container{
+    margin-left: 100px;
+    position: relative; 
+    border-radius: 5%;
+    background-color: #ffffff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    width: 350px; /* Set fixed width */
+    height: 200px; /* Set fixed height */
+    margin-bottom: 20px; /* Space at the bottom for event details */
+}
 
+
+.starts_from_row{
+    padding: 15px 20px;
+
+}
+.starts_from_row p{
+    font-size: 14px;
+}
+.starts_from_row h4{
+    font-size: 18px;
+}
+.line {
+    width: 100%; /* Adjust the width of the line */
+    height: 2px; /* Adjust the height of the line */
+    background-color: rgba(83, 83, 83, 0.171); /* Color of the line */
+    cursor: not-allowed; /* Change cursor to pointer on hover */
+}
+
+
+.sold-out-button {
+    margin-top: 21px;
+    margin-left: auto; /* Set left margin to auto */
+    margin-right: auto; /* Set right margin to auto */
+    width: 290px; /* Adjust the width as needed */
+    height: 35px;
+    background-color: #78006E; /* Background color for the button */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners */
+    cursor:auto; /* Cursor style when disabled */
+    font-weight: bold; /* Bold font */
+    display: block;
+}
+.overview{   
+    color: #000000;
+	margin-left: 40px;
+	margin-top: 20px;}
+
+    
+.theoverview {
+    margin-left: 40px;
+	margin-top: 20px;
+        max-width: 600px; /* Adjust the maximum width as needed */
+    }
+    
+.theoverview p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .collapsible {
+    margin-left:40px;
+        background-color: #ffffff;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width:50%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+      .active, .collapsible:hover {
+        background-color: #F9F9FA;
+      }
+      
+      /* Style the collapsible content. Note: hidden by default */
+      .content {
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        margin-left:40px;
+
+    }
+    
+      .collapsible:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: white;
+        float: right;
+        margin-left: 5px;
+
+      }
+      
+      .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+      }
+      .line1 {
+        margin-left:40px;
+
+        width: 50%; /* Adjust the width of the line */
+        height: 1px; /* Adjust the height of the line */
+        background-color: rgba(0, 0, 0, 0.171); /* Color of the line */
+    }
+    .green-icon {
+        color: #4CAF50; /* Green color */
+        margin-right: 10px;
+      }
+      .included-list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      .included-list li {
+        margin-bottom: 5px;
+        color: green;
+      }
+      
+      /* Style for the "Location" section */
+      .location-section {
+        margin-left: 65px;
+        margin-top: 20px;     
+   }
+      
+      .location-section h3 {
+        font-size: 20px;
+        color: #333;
+      }
+      
+      .meeting-point {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      
+      .location {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+      .location-container {
+        display: flex;
+        justify-content: flex-start;
+                align-items: center;
+    }
+    .direction-button {
+        background-color: #78006E;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 15px;
+        cursor: pointer;
+        margin-left: 600px; /* Adjust margin as needed */
+    text-decoration: none;
+    }
+    .content p{
+        margin-left: 40px;
+        margin-top: 20px;
+            max-width: 600px; /* Adjust the maximum width as needed */
+    }
