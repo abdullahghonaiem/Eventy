@@ -5,9 +5,10 @@
 
 body {
 	font-family: 'Poppins', sans-serif;
+  
 }
 .wrapper {
-	width: 1170px;
+	width: 100%;
 	margin: auto;
 }
 header {
@@ -51,12 +52,16 @@ header {
 	color: #333;
 }
 footer {
-    position: relative;
-    background-color: #78006E;
-    padding: 20px;
-    }
+  position: relative;
+  background-color: #78006E;
+  padding: 20px;
+  width: 100%; /* Ensure footer takes full width */
+  
+}
     
     .f_title {
+      position: relative;
+
     font-size: 30px;
     color: #fff;
     margin-bottom: 10px;
@@ -122,6 +127,7 @@ footer {
 }
 .photo-container {
     display: flex;
+
     flex-direction: row;
     align-items: start;
     justify-content: start;
@@ -231,21 +237,48 @@ footer {
 .right-button {
     right: 10px; /* Position the right button */
 }
-.price_container{
+.container {
+  display: flex;
+  flex-direction: row; /* Change flex direction to row */
+  justify-content: space-between; /* Add space between the two columns */
+  align-items: flex-start; /* Align items to the start of the container */
+  margin-top: 50px;
+  margin-left: 40px; /* Adjust margin as needed */
+}
+
+.price_container {
     margin-left: 100px;
-    position: relative; 
+    margin-top: 50px;
+    left:  0;
+    position: sticky;
+    top: 20px; /* Adjust the top position as needed */
     border-radius: 5%;
     background-color: #ffffff; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s ease; 
     overflow: hidden; 
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column-reverse; 
     width: 350px; /* Set fixed width */
     height: 200px; /* Set fixed height */
     margin-bottom: 20px; /* Space at the bottom for event details */
 }
 
+.wrapper2 {
+  display: flex;
+  flex-direction: row; /* Arrange columns horizontally */
+  justify-content: space-between; /* Add space between columns */
+  margin-top: 50px;
+  margin-left: 40px; /* Adjust margin as needed */
+}
+
+.first_column {
+  width: fit-content;
+}
+
+.second_column {
+  width: fit-content; /* Adjust width as needed */
+}
 
 .starts_from_row{
     padding: 15px 20px;
@@ -357,12 +390,12 @@ footer {
       }
       
       /* Style for the "Location" section */
-      .location-section {
+      .location-section2 {
         margin-left: 65px;
         margin-top: 20px;     
    }
       
-      .location-section h3 {
+      .location-section2 h3 {
         font-size: 20px;
         color: #333;
       }
@@ -376,7 +409,7 @@ footer {
         font-size: 18px;
         margin-bottom: 25px;
       }
-      .location-container {
+      .location-container2 {
         display: flex;
         justify-content: flex-start;
                 align-items: center;
@@ -389,7 +422,7 @@ footer {
         font-size: 16px;
         border-radius: 15px;
         cursor: pointer;
-        margin-left: 600px; /* Adjust margin as needed */
+        margin-left: 200px; /* Adjust margin as needed */
     text-decoration: none;
     }
     .content p{
