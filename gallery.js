@@ -1,3 +1,95 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+      apiKey: "AIzaSyDoeMIIjexhefgn-1fc-byEdwl9GufZPIw",
+    authDomain: "eventy-53625.firebaseapp.com",
+    projectId: "eventy-53625",
+    storageBucket: "eventy-53625.appspot.com",
+    messagingSenderId: "371659741850",
+    appId: "1:371659741850:web:3e545238058543f5cd1d23",
+    measurementId: "G-FN8MSHZGZH"
+  };
+  firebase.initializeApp(firebaseConfig);
+  // Set database variable
+  var database = firebase.database();
+  
+  function displayComments(comments) {
+    var container = document.querySelector('.commentview');
+    container.innerHTML = ''; // Clear existing comments
+  
+    if (comments) {
+      Object.values(comments).forEach(comment => {
+        var commentContainer = document.createElement('div'); // Create a new container for each comment
+        commentContainer.classList.add('container-comment');
+  
+        var p = document.createElement('p');
+        p.textContent = comment.comment;
+  
+        commentContainer.appendChild(p);
+        container.appendChild(commentContainer); // Append the comment container to the main container
+      });
+    } else {
+      var p = document.createElement('p');
+      p.textContent = "No comments yet.";
+      container.appendChild(p);
+    }
+  }
+  
+  // Function to fetch comments from Firebase
+  function getComments() {
+    var commentsRef = database.ref('comments');
+    commentsRef.once('value', function (snapshot) {
+      var comments = snapshot.val();
+      displayComments(comments);
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    const commentTextElement = document.getElementById('commentText');
+    const leftButton = document.getElementById('leftButton');
+    const rightButton = document.getElementById('rightButton');
+
+    let currentIndex = 0;
+    let comments = [];
+
+    // Function to update comment text with current comment
+    function updateCommentText() {
+        if (comments.length > 0) {
+            commentTextElement.textContent = comments[currentIndex].comment;
+        } else {
+            commentTextElement.textContent = "No comments yet.";
+        }
+    }
+
+    // Fetch comments from Firebase and update comments array
+    getComments();
+
+    // Left button event listener
+    leftButton.addEventListener('click', () => {
+        if (comments.length > 0) {
+            currentIndex = (currentIndex - 1 + comments.length) % comments.length;
+            updateCommentText();
+        }
+    });
+
+    // Right button event listener
+    rightButton.addEventListener('click', () => {
+        if (comments.length > 0) {
+            currentIndex = (currentIndex + 1) % comments.length;
+            updateCommentText();
+        }
+    });
+
+    // Function to fetch comments from Firebase
+    function getComments() {
+        var commentsRef = database.ref('comments');
+        commentsRef.once('value', function (snapshot) {
+            comments = Object.values(snapshot.val() || {}); // Convert comments object to array
+            updateCommentText(); // Update comment text after fetching comments
+        });
+    }
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Function to open modal and play video
     function openModal(modalId) {

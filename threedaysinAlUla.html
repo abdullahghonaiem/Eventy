@@ -9,6 +9,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <script src="threedaysinAlUla.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+<script src="threedaysinAlUla.js"></script>
+<script src="firebase.js"></script>
+    <script>
+        function adjustTextareaHeight() {
+            // Implement the logic to adjust the height of the textarea if needed
+            // For example:
+            var textarea = document.getElementById('comment');
+            textarea.style.height = textarea.scrollHeight + '';
+        }
+    </script>
+         <script>
+            document.addEventListener('DOMContentLoaded', function () {
+  const textElement = document.getElementById('text');
+  const leftButton = document.getElementById('leftButton');
+  const rightButton = document.getElementById('rightButton');
+
+  let currentIndex = 0;
+  let comments = [];
+
+  // Function to update text element with current comment
+  function updateText() {
+    if (comments.length > 0) {
+      textElement.textContent = comments[currentIndex].comment;
+    } else {
+        textElement.textContent = "No comments for this event yet.";
+    }
+  }
+
+  // Fetch comments from Firebase and update comments array
+  getComments();
+
+  // Left button event listener
+  leftButton.addEventListener('click', () => {
+    if (comments.length > 0) {
+      currentIndex = (currentIndex - 1 + comments.length) % comments.length;
+      updateText();
+    }
+  });
+
+  // Right button event listener
+  rightButton.addEventListener('click', () => {
+    if (comments.length > 0) {
+      currentIndex = (currentIndex + 1) % comments.length;
+      updateText();
+    }
+  });
+
+  // Function to fetch comments from Firebase
+  function getComments() {
+    var commentsRef = database.ref('comments');
+    commentsRef.once('value', function (snapshot) {
+      var allComments = snapshot.val() || {};
+      var AlullaComments = Object.values(allComments).filter(comment => comment.event === 'threedaysinAlUla');
+      comments = AlullaComments; 
+      updateText(); 
+    });
+  }
+});
+        </script>
 </head>
 
 <body>
@@ -202,6 +263,35 @@
 </div>
 </div>
 
+<br>
+    <br>
+    <section class="comment">
+        <h2>Leave a Comment:</h2>
+        <div class="comment-section">
+            <div class="comment-box">
+                <textarea id="comment" placeholder="Write your comment here..." oninput="countWords(); adjustTextareaHeight();"></textarea>
+                <input type="hidden" id="Event" value="threedaysinAlUla">
+                <div id="word-count-indicator">0/150</div>
+                <button onclick="save()">Submit</button>
+            </div>
+        </div>
+    </section>
+
+
+<br>
+<br>
+<section class="comment">
+    <div class="commentview">
+        <div class="comment-container">
+            <div class="arrow left" id="leftButton"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="comment-box">
+                <hr>
+                <p id="text">Initial Text</p>
+            </div>
+            <div class="arrow right" id="rightButton"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+    </div>
+</section>
 </body>
 <footer>
     <h1 class="f_title">
