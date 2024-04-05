@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="page5.css">
+       <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="page5.js"></script>
+
+
+    <title>Eventful</title>
+
+
+</head>
+<body>
+    <main>
+    <header>
+        <h1 class="title">
+            <a href="page1.html">
+                <i class="fa-solid fa-ticket"></i> Eventful
+            </a>
+
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="page2.html">Events</a></li>
+                <li><a href="page5.html">Gallery</a></li>
+                <li><a href="page4.html">Contact</a></li>
+            </ul>
+
+        </nav>
+        </header>
+<section class="section1">
+    <div id="image-container">
+        <div class="image-wrapper">
+            <img src="gallery/1.webp" id="image">
+            <button class="invisible-button right-arrow" onclick="changeImage()">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="text-content">
+            <p>At Eventufl, we take pride in curating events that leave a lasting impression on our guests. As you explore our gallery
+            and read the testimonials from past attendees, we hope you'll feel inspired and excited about the possibilities for your
+            upcoming event. Whether you're planning a grand celebration or an intimate gathering, let us help you create memories
+            that will be cherished for a lifetime.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section2">
+    <div id="image-container">
+        <div class="text-content">
+            <p>we invite you to reminisce on the unforgettable moments from our past events. As you browse through the captivating
+            images captured at our gatherings, you'll witness the joy, laughter, and camaraderie that define the essence of our
+            events. From elegant weddings and vibrant celebrations to corporate gatherings and cultural festivals, each image tells
+            a story of cherished memories and remarkable experiences.</p>
+        </div>
+        <div class="image-wrapper">
+            <button class="invisible-button left-arrow" onclick="changeVideo()">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+<video controls id="video">
+    <source src="videos/1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<br>
+
+<p class="p1">
+    What our clients says about our events:
+</p>
+
+<section class="comment">
+    <div class="commentview">
+        <div class="comment-container">
+            <div class="arrow left" id="leftButton"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="comment-box">
+                <img src="icon.png" alt="Profile Photo" id="profilePhoto">
+                <hr>
+                <p id="commentText">Initial Text</p>
+            </div>
+            <div class="arrow right" id="rightButton"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+    </div>
+</section>
+
+
+   
+
+
+        </main>
+        <footer>
+            <h1 class="f_title">
+                <i class="fa-solid fa-ticket"></i> Eventful
+            </h1>
+        
+            <div class="right-column">
+                <p><b>Email:</b>support@eventful.co</p>
+                <p><b>Phone Number:</b>+90 544 875 35 05</p>
+            <p><b>Address:</b>5275, WJ Sariyer, Istanbul</p>
+            </div>
+        
+        </footer>
+    
+
+</body> 
+
+
+</html>

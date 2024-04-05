@@ -1,0 +1,180 @@
+    /* CSS styles for gallery */
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .wrapper {
+        width: 1170px;
+        margin: auto;
+    }
+
+    header {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(saudiarabiatourism.jpg);
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        overflow-y: auto; 
+        height: 40vh; 
+    }
+
+    .eventy-text {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        z-index: 1000; 
+    }
+
+    .nav-area {
+        float: right;
+        list-style: none;
+        margin-top: 30px;
+    }
+
+    .nav-area li {
+        display: inline-block;
+    }
+
+    .nav-area li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 20px;
+        font-family: poppins;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .nav-area li a:hover {
+        background: #fff;
+        color: #333;
+    }
+
+    .Previous_events {
+        color: #000000;
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 120px;
+        margin-top: 30px;
+    }
+
+    .gallery {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .gallery-container {
+        margin-bottom: 70px; /* Add margin between gallery containers */
+    }
+
+    .gallery img {
+        width: 400px;
+        height: auto;
+        display: block;
+    }
+
+
+    .gallery-item {
+        position: relative;
+        display: inline-block;
+    }
+
+
+    .gallery-item img {
+        display: block;
+    }
+
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(128, 0, 128, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1; /* Ensure the overlay is above the image */
+    }
+    .image-description {
+        position: relative;
+        z-index: 2; /* Ensure the description is above the overlay */
+        background: rgb(255, 255, 255); /* Optional: Add a semi-transparent background for better readability */
+        padding: 10px;
+        text-align: center;
+        color: #000000;
+        font-size: 24px;
+        line-height: 1.6;
+
+    }
+    
+
+    .overlay span {
+        display: none;
+    }
+
+    .gallery-item:hover .overlay {
+        opacity: 1;
+    }
+
+    .gallery-item:hover .overlay span {
+        display: block;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .modal-content video {
+        width: 100%;
+        height: 100%;
+    }
+
+    .close {
+        color: white;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }

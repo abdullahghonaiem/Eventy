@@ -1,0 +1,430 @@
+
+body {
+	font-family: 'Poppins', sans-serif;
+  margin: 0;
+	padding: 0;
+}
+.wrapper {
+	width: 100%;
+	margin: auto;
+}
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(saudiarabiatourism.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    height: 40vh; 
+}
+
+.eventy-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1000; 
+}
+
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+
+.nav-area li {
+	display: inline-block;
+}
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+footer {
+  position: relative;
+  background-color: #78006E;
+  height: 30vh; 
+  width: 100%; /* Ensure footer takes full width */
+  
+}
+    
+    .f_title {
+    position: relative;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+    }
+    
+    .copy {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    }
+    
+    .right-column {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+
+    align-items: flex-end; /* Align items to the right */
+    }
+    
+    @media screen and (max-width: 768px) {
+    .right-column {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center; /* Center items on smaller screens */
+    }
+    }
+    
+    
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    }
+    
+    @media screen and (max-width: 768px) {
+    .right-column {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    }
+.Diving_text {
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+}
+
+.location-container .fa-map-marker {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-right: 5px; /* Add margin to the right of the icon */
+
+}
+.photo-container {
+    display: flex;
+
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    margin-top: 50px;
+	margin-left: 40px;
+}
+
+.big-photo {
+    margin-right: 20px; /* Adjust margin to create space between big photo and smaller photos */
+}
+
+.big-photo img {
+    border-radius: 3%;
+    width: 600px; /* Adjust the width of the big photo */
+    height: auto;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: start;
+    margin-bottom: 20px;
+	margin-left: 40px;
+
+}
+
+.small-photo img {
+    border-radius: 3%;
+
+    width: 200px; /* Adjust the width of the small photos */
+    height: auto;
+
+    margin-right: 10px; /* Adjust the margin between small photos */
+}
+.column{ display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+    margin-bottom: 20px;
+}
+
+/* Add this CSS to style the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    margin: auto; /* Center horizontally */
+    display: block;
+    max-width: 50%;
+}
+
+
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+ /* Style the left and right buttons in the modal */
+/* Initially hide buttons */
+.photo-button {
+    display: block;
+    position: absolute;
+    background-color: rgb(95, 95, 95);
+    border: none;
+    color: rgb(236, 236, 236);
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1; 
+    top: 50%; /* Position the buttons vertically at 50% of their containing element */
+    padding: 20px 12px; /* Adjust the padding to control the size of the buttons */
+    top: 50%; /* Position the buttons vertically at 50% of their containing element */
+    transform: translateY(-50%); /* Adjust the position to center the buttons vertically */
+}
+
+/* Style the left and right buttons in the modal */
+.left-button {
+    left: 10px; /* Position the left button */
+}
+
+.right-button {
+    right: 10px; /* Position the right button */
+}
+.container {
+  display: flex;
+  flex-direction: row; /* Change flex direction to row */
+  justify-content: space-between; /* Add space between the two columns */
+  align-items: flex-start; /* Align items to the start of the container */
+  margin-top: 50px;
+  margin-left: 40px; /* Adjust margin as needed */
+}
+
+.price_container {
+    margin-left: 100px;
+    margin-top: 50px;
+    left:  0;
+    position: sticky;
+    top: 20px; /* Adjust the top position as needed */
+    border-radius: 5%;
+    background-color: #ffffff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column-reverse; 
+    width: 350px; /* Set fixed width */
+    height: 200px; /* Set fixed height */
+    margin-bottom: 20px; /* Space at the bottom for event details */
+}
+
+ .wrapper2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; 
+  margin-top: 50px;
+  width: fit-content;
+} 
+
+.first_column {
+  width: fit-content;
+}
+
+.second_column {
+  width: fit-content; 
+}
+.starts_from_row{
+    padding: 15px 20px;
+
+}
+.starts_from_row p{
+    font-size: 14px;
+}
+.starts_from_row h4{
+    font-size: 18px;
+}
+.line {
+    width: 100%; /* Adjust the width of the line */
+    height: 2px; /* Adjust the height of the line */
+    background-color: rgba(83, 83, 83, 0.171); /* Color of the line */
+    cursor: not-allowed; /* Change cursor to pointer on hover */
+}
+
+
+.sold-out-button {
+    margin-top: 21px;
+    margin-left: auto; /* Set left margin to auto */
+    margin-right: auto; /* Set right margin to auto */
+    width: 290px; /* Adjust the width as needed */
+    height: 35px;
+    background-color: #78006E; /* Background color for the button */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners */
+    cursor:auto; /* Cursor style when disabled */
+    font-weight: bold; /* Bold font */
+    display: block;
+}
+.overview{   
+    color: #000000;
+	margin-left: 40px;
+	margin-top: 20px;}
+
+    
+.theoverview {
+    margin-left: 40px;
+	margin-top: 20px;
+        max-width: 600px; /* Adjust the maximum width as needed */
+    }
+    
+.theoverview p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .collapsible {
+    margin-left:40px;
+        background-color: #ffffff;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width:50%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+      .active, .collapsible:hover {
+        background-color: #F9F9FA;
+      }
+      
+      /* Style the collapsible content. Note: hidden by default */
+      .content {
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        margin-left:40px;
+
+    }
+    
+      .collapsible:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: white;
+        float: right;
+        margin-left: 5px;
+
+      }
+      
+      .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+      }
+      .line1 {
+        margin-left:40px;
+
+        width: 50%; /* Adjust the width of the line */
+        height: 1px; /* Adjust the height of the line */
+        background-color: rgba(0, 0, 0, 0.171); /* Color of the line */
+    }
+    .green-icon {
+        color: #4CAF50; /* Green color */
+        margin-right: 10px;
+      }
+      .included-list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      .included-list li {
+        margin-bottom: 5px;
+        color: green;
+      }
+      
+      /* Style for the "Location" section */
+      .location-section2 {
+        margin-left: 65px;
+        margin-top: 20px;     
+   }
+      
+      .location-section2 h3 {
+        font-size: 20px;
+        color: #333;
+      }
+      
+      .meeting-point {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      
+      .location {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+      .location-container2 {
+        display: flex;
+        justify-content: flex-start;
+                align-items: center;
+    }
+    .direction-button {
+        background-color: #78006E;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 15px;
+        cursor: pointer;
+        margin-left: 200px; /* Adjust margin as needed */
+    text-decoration: none;
+    }
+    .content p{
+        margin-left: 40px;
+        margin-top: 20px;
+            max-width: 600px; /* Adjust the maximum width as needed */
+    }

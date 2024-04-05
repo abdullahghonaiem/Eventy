@@ -1,0 +1,326 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+	width: 1170px;
+	margin: auto;
+}
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(saudiarabiatourism.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow-y: auto; 
+    height: 40vh; 
+}
+
+.eventy-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1000; 
+}
+
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+
+.nav-area li {
+	display: inline-block;
+}
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+footer {
+    position: relative;
+    background-color: #78006E;
+    height: 30vh; 
+    width: 100%; /* Ensure footer takes full width */
+    
+  }
+      
+      .f_title {
+      position: relative;
+      font-size: 30px;
+      color: #fff;
+      margin-bottom: 10px;
+      }
+      
+      .copy {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
+      }
+      
+      .right-column {
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      font-size: 15px;
+      margin-top: 10px;
+      margin-right: 10px;
+  
+      align-items: flex-end; /* Align items to the right */
+      }
+      
+      @media screen and (max-width: 768px) {
+      .right-column {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+      align-items: center; /* Center items on smaller screens */
+      }
+      }
+      
+      
+      .row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      margin: 0 auto;
+      }
+      
+      @media screen and (max-width: 768px) {
+      .right-column {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+      }
+      }
+      .First_Section {
+        position: relative;
+        padding: 30px; 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        align-items: center; 
+    }
+    
+    #img-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        margin-top: 40px;
+    }
+    
+    .img-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-right: 20px; 
+    }
+    
+    .First_Section img {
+        width: 100vh; /* Adjust width based on your preference */
+        height: 75vh; 
+        transition: transform 0.3s ease;
+        border-radius: 10px; 
+    }
+    
+    .First_Section i {
+        font-size: 7vw; 
+        padding: 5px;
+    }
+
+    .text-content {
+        width: 50%; 
+    }
+    .invisible-button {
+        margin-left: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none; 
+    }
+
+    @media screen and (max-width: 768px) {
+       
+        .First_Section img{
+            height:20vh;
+            width:40vh;
+        }
+    
+    
+        .First_Section p {
+            font-size: 3vw;  
+        }
+    
+        .First_Section i {
+            font-size: 6vw;  
+        }
+        .text-content {
+        width: 60%; 
+    }
+    }
+    
+    @media screen and (max-width: 480px) {
+         .text-content {
+        width: 60%; 
+    }
+    
+        .First_Section p {
+            font-size: 4vw; 
+        }
+         .First_Section img{
+            height:15vh;
+            width:30vh;
+        }
+    
+        .First_Section img {
+            max-width: 100%; 
+        }
+    
+        .First_Section i {
+            font-size: 8vw; 
+        }
+    }
+    .First_Section p {
+        font-size: 1.75vw;  
+        margin: 0 auto 40px auto; 
+        max-width: 80%;  
+    }
+    
+.events-container {
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 0 auto; 
+    max-width: 100%;
+}
+.event-container {
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    border-radius: 3%;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 645px;
+    margin-bottom: 20px;
+}
+
+.event-container:hover {
+    transform: translateY(-5px);
+}
+.event {
+    text-align: center;
+    width: 100%; /* Take up the full width */
+}
+.event-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.event-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.event-date div {
+    margin: 0 5px;
+    font-weight: bold;
+
+}
+
+.description {
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.Events_home {
+    position: relative; 
+    width: 300px;
+    background-size: cover;
+    display: inline-block;
+    margin: 0 15px; 
+
+}
+
+.event-image {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Ensure image doesn't overflow container */
+    height: 200px; /* Set a fixed height for uniformity */
+}
+
+.event-image img {
+    border-radius: 3%;
+    width: 100%; /* Ensure image fills container horizontally */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover entire container */
+}
+
+
+
+
+.location-text {
+    color: #ffffff;
+    position: absolute;
+    top: 15px; /* Adjust as needed */
+    left: 15px; /* Adjust as needed */
+    background-color:#0000002d;
+    padding: 5px; /* Adjust as needed */
+    border-radius: 3px;
+    font-size: 12px;
+}
+.seeMore {
+    padding: 5px; /* Adjust as needed */
+    font-size: 16px;
+    margin-top: auto; /* Push "See More" to the bottom */
+    text-align: center; /* Center align the text */
+}
+
+.seeMore hr {
+    border: none;
+    border-top: 0.1px solid #6b6b6b6b; /* Thin line above the "See More" link */
+    margin: 0 auto; /* Center the line */
+    width: 90%; /* Adjust the width of the line */
+}
+
+.seeMore p span {
+    margin-left: 156px; /* Adjust spacing between text and arrow */
+}
+.event-details h3{    color: #000000; /* Set text color to black */
+    margin-top: 10px; /* Push "See More" to the bottom */
+}
+.seeMore p {
+    color: #9B3C8C; /* Set text color to black */
+    margin-top: 10px; /* Push "See More" to the bottom */
+    font-weight: bold;
+
+
+}
+.events-container a {
+    text-decoration: none !important; /* Remove underline for anchor elements within .events-container */
+}

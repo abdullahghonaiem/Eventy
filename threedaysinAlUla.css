@@ -1,11 +1,8 @@
-* {
-	margin: 0;
-	padding: 0;
-}
 
 body {
 	font-family: 'Poppins', sans-serif;
-  
+  margin: 0;
+	padding: 0;
 }
 .wrapper {
 	width: 100%;
@@ -16,7 +13,7 @@ header {
     background-size: cover;
     background-position: center center;
     position: relative;
-    overflow-y: auto; 
+    overflow: hidden;
     height: 40vh; 
 }
 
@@ -54,14 +51,13 @@ header {
 footer {
   position: relative;
   background-color: #78006E;
-  padding: 20px;
+  height: 30vh; 
   width: 100%; /* Ensure footer takes full width */
   
 }
     
     .f_title {
-      position: relative;
-
+    position: relative;
     font-size: 30px;
     color: #fff;
     margin-bottom: 10px;
@@ -79,6 +75,8 @@ footer {
     color: #fff;
     font-size: 15px;
     margin-top: 10px;
+    margin-right: 10px;
+
     align-items: flex-end; /* Align items to the right */
     }
     
@@ -264,22 +262,22 @@ footer {
     margin-bottom: 20px; /* Space at the bottom for event details */
 }
 
-.wrapper2 {
+ .wrapper2 {
+  width: 100%;
   display: flex;
-  flex-direction: row; /* Arrange columns horizontally */
-  justify-content: space-between; /* Add space between columns */
+  flex-direction: row; 
+  justify-content: space-between; 
   margin-top: 50px;
-  margin-left: 40px; /* Adjust margin as needed */
-}
+  width: fit-content;
+} 
 
 .first_column {
   width: fit-content;
 }
 
 .second_column {
-  width: fit-content; /* Adjust width as needed */
+  width: fit-content; 
 }
-
 .starts_from_row{
     padding: 15px 20px;
 

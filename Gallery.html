@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Eventy</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="homestyle.css">    
+    <link rel="stylesheet" href="gallery.css">   
 </head>
 <body>
     <header>
@@ -20,5 +20,84 @@
             </ul>
         </div>
     </header>
+    <div class='Previous_events'>
+        <h2>Previous events</h2>
+    </div>
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item" id="image1">
+                <img src="boulevard.jpg" alt="Image 1">
+                <div class="image-description">
+                    <p>Boulevard World</p>
+                </div>
+                <div class="overlay"><span>View Video</span></div>
+                <div id="myModal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <video controls autoplay>
+                            <source src="Boulevard World.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" id="image2">
+                <img src="Jeddah season.png" alt="Image 2">
+                <div class="image-description">
+                    <p>Jeddah Season</p>
+                </div>
+                <div class="overlay"><span>View Video</span></div>
+                <div id="myModal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <video controls autoplay>
+                            <source src="jeddah_Season.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item" id="image3">
+                <img src="Riyadh_Season.png" alt="Image 3">
+                <div class="image-description">
+                    <p>Riyadh Season</p>
+                </div>
+                <div class="overlay"><span>View Video</span></div>
+                <div id="myModal3" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <video controls autoplay>
+                            <source src="Riyadh Season .mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" id="image4">
+                <img src="formulaone.png" alt="Image 4">
+                <div class="image-description">
+                    <p>Formula One</p>
+                </div>
+                <div class="overlay"><span>View Video</span></div>
+                <div id="myModal4" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <video controls autoplay>
+                            <source src="Formula_one.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="gallery.js"></script>
 </body>
 </html>
