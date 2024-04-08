@@ -223,7 +223,13 @@ footer {
     height: 645px;
     margin-bottom: 20px;
 }
-
+.Featured_Events{
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+	margin-left: 120px; 
+	margin-top: 70px;
+}
 .event-container:hover {
     transform: translateY(-5px);
 }
