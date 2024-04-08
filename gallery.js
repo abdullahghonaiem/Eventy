@@ -90,100 +90,87 @@ var firebaseConfig = {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Function to open modal and play video
-    function openModal(modalId) {
-        var modal = document.getElementById(modalId);
-        var video = modal.querySelector('video');
-        modal.style.display = 'block';
-        video.play();
-        if (video.requestFullscreen) {
-            video.requestFullscreen();
-        } else if (video.mozRequestFullScreen) { /* Firefox */
-            video.mozRequestFullScreen();
-        } else if (video.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-            video.webkitRequestFullscreen();
-        } else if (video.msRequestFullscreen) { /* IE/Edge */
-            video.msRequestFullscreen();
-        }
-    }
+// Get the modals
+var modal1 = document.getElementById("myModal1");
+var modal2 = document.getElementById("myModal2");
+var modal3 = document.getElementById("myModal3");
+var modal4 = document.getElementById("myModal4");
 
-    // Function to close modal and pause video
-    function closeModal(modalId) {
-        var modal = document.getElementById(modalId);
-        var video = modal.querySelector('video');
-        modal.style.display = 'none';
-        video.pause();
-    }
+// Get the overlays
+var overlay1 = document.getElementById("overlay1");
+var overlay2 = document.getElementById("overlay2");
+var overlay3 = document.getElementById("overlay3");
+var overlay4 = document.getElementById("overlay4");
 
-    // Get all the overlay elements
-    var overlays = document.querySelectorAll('.overlay');
+// Get the <span> elements that close the modals
+var span1 = document.querySelector("#myModal1 .close");
+var span2 = document.querySelector("#myModal2 .close");
+var span3 = document.querySelector("#myModal3 .close");
+var span4 = document.querySelector("#myModal4 .close");
 
-    // Loop through each overlay and attach click event
-    overlays.forEach(function(overlay) {
-        overlay.addEventListener('click', function() {
-            var modalId = this.parentNode.querySelector('.modal').id;
-            openModal(modalId);
-        });
-    });
+// Function to open modals
+overlay1.onclick = function() {
+  modal1.style.display = "block";
+}
+overlay2.onclick = function() {
+  modal2.style.display = "block";
+}
+overlay3.onclick = function() {
+  modal3.style.display = "block";
+}
+overlay4.onclick = function() {
+  modal4.style.display = "block";
+}
 
-    // Get all the close buttons
-    var closeButtons = document.querySelectorAll('.close');
+// Function to close modals when clicking on <span> (x)
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+span4.onclick = function() {
+  modal4.style.display = "none";
+}
 
-    // Loop through each close button and attach click event
-    closeButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            var modalId = this.parentNode.parentNode.id;
-            closeModal(modalId);
-        });
-    });
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target.classList.contains('modal')) {
-            var modalId = event.target.id;
-            closeModal(modalId);
-        }
-    };
-
-    // When the video ends, close the modal
-    document.querySelectorAll('video').forEach(function(video) {
-        video.addEventListener('ended', function() {
-            var modalId = this.parentNode.parentNode.id;
-            closeModal(modalId);
-        });
-    });
-
-    // Listen for fullscreen change event
-    document.addEventListener('fullscreenchange', function(event) {
-        if (!document.fullscreenElement) {
-            // Exit full-screen mode, close modal
-            var modalId = document.querySelector('.modal').id;
-            closeModal(modalId);
-        }
-    });
-
-    document.addEventListener('mozfullscreenchange', function(event) {
-        if (!document.mozFullScreenElement) {
-            // Exit full-screen mode, close modal
-            var modalId = document.querySelector('.modal').id;
-            closeModal(modalId);
-        }
-    });
-
-    document.addEventListener('webkitfullscreenchange', function(event) {
-        if (!document.webkitFullscreenElement) {
-            // Exit full-screen mode, close modal
-            var modalId = document.querySelector('.modal').id;
-            closeModal(modalId);
-        }
-    });
-
-    document.addEventListener('msfullscreenchange', function(event) {
-        if (!document.msFullscreenElement) {
-            // Exit full-screen mode, close modal
-            var modalId = document.querySelector('.modal').id;
-            closeModal(modalId);
-        }
-    });
-});
+// Function to close modals when clicking outside the modal content
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+  if (event.target == modal4) {
+    modal4.style.display = "none";
+  }
+}
+// Function to close modals when clicking on <span> (x)
+span1.onclick = function() {
+    modal1.style.display = "none";
+    pauseVideo('video1'); // Call function to pause video
+  }
+  span2.onclick = function() {
+    modal2.style.display = "none";
+    pauseVideo('video2'); // Call function to pause video
+  }
+  span3.onclick = function() {
+    modal3.style.display = "none";
+    pauseVideo('video3'); // Call function to pause video
+  }
+  span4.onclick = function() {
+    modal4.style.display = "none";
+    pauseVideo('video4'); // Call function to pause video
+  }
+  
+  // Function to pause video
+  function pauseVideo(videoId) {
+    var video = document.getElementById(videoId);
+    video.pause();
+  }

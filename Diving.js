@@ -110,7 +110,7 @@ smallPhotos.forEach(function(photo, index) {
 
     let currentIndex=0;
     function changeImage(){
-        const images=['Diving/Diving.jpg','Diving/Diving2.jpg','Diving/Diving3.jpg','Diving/Diving4.jpg','Diving/Diving5.jpeg'];
+        const images=['Diving/Diving.jpg','Diving/Diving2.jpg','Diving/Diving3.jpg','Diving/Diving4.jpg','Diving/Diving5.jpg'];
         const imageElement=document.getElementById('modal-image');
         currentIndex=(currentIndex+1)% images.length;
         imageElement.src=images[currentIndex];

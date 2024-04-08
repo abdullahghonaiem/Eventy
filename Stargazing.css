@@ -1,11 +1,14 @@
 
-body {
-	font-family: 'Poppins', sans-serif;
-  margin: 0;
+* {
+	margin: 0;
 	padding: 0;
 }
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
 .wrapper {
-	width: 100%;
+	width: 1170px;
 	margin: auto;
 }
 header {
@@ -13,7 +16,7 @@ header {
     background-size: cover;
     background-position: center center;
     position: relative;
-    overflow: hidden;
+    overflow-y: auto; 
     height: 40vh; 
 }
 
@@ -49,61 +52,61 @@ header {
 	color: #333;
 }
 footer {
-  position: relative;
-  background-color: #78006E;
-  height: 30vh; 
-  width: 100%; /* Ensure footer takes full width */
-  
-}
-    
-    .f_title {
     position: relative;
-    font-size: 30px;
-    color: #fff;
-    margin-bottom: 10px;
-    }
+    background-color: #78006E;
+    height: 30vh; 
+    width: 100%; /* Ensure footer takes full width */
     
-    .copy {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 10px;
-    }
-    
-    .right-column {
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    font-size: 15px;
-    margin-top: 10px;
-    margin-right: 10px;
-
-    align-items: flex-end; /* Align items to the right */
-    }
-    
-    @media screen and (max-width: 768px) {
-    .right-column {
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
-    align-items: center; /* Center items on smaller screens */
-    }
-    }
-    
-    
-    .row {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 0 auto;
-    }
-    
-    @media screen and (max-width: 768px) {
-    .right-column {
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
-    }
-    }
+  }
+      
+      .f_title {
+      position: relative;
+      font-size: 30px;
+      color: #fff;
+      margin-bottom: 10px;
+      }
+      
+      .copy {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
+      }
+      
+      .right-column {
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      font-size: 15px;
+      margin-top: 10px;
+      margin-right: 10px;
+  
+      align-items: flex-end; /* Align items to the right */
+      }
+      
+      @media screen and (max-width: 768px) {
+      .right-column {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+      align-items: center; /* Center items on smaller screens */
+      }
+      }
+      
+      
+      .row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      margin: 0 auto;
+      }
+      
+      @media screen and (max-width: 768px) {
+      .right-column {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+      }
+      }
 .Stargazing_text {
     color: #000000;
     font-size: 28px;
