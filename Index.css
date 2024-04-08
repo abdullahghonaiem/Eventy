@@ -54,7 +54,7 @@ footer {
     position: relative;
     background-color: #78006E;
     height: 30vh; 
-    width: 100%; /* Ensure footer takes full width */
+    width: 100%;
     
   }
       
@@ -79,7 +79,7 @@ footer {
       margin-top: 10px;
       margin-right: 10px;
   
-      align-items: flex-end; /* Align items to the right */
+      align-items: flex-end; 
       }
       
       @media screen and (max-width: 768px) {
@@ -87,7 +87,7 @@ footer {
       margin-top: 0;
       margin-bottom: 20px;
       text-align: center;
-      align-items: center; /* Center items on smaller screens */
+      align-items: center; 
       }
       }
       
@@ -131,7 +131,7 @@ footer {
     }
     
     .First_Section img {
-        width: 100vh; /* Adjust width based on your preference */
+        width: 100vh; 
         height: 75vh; 
         transition: transform 0.3s ease;
         border-radius: 10px; 
@@ -235,7 +235,7 @@ footer {
 }
 .event {
     text-align: center;
-    width: 100%; /* Take up the full width */
+    width: 100%; 
 }
 .event-details {
     display: flex;
@@ -276,15 +276,15 @@ footer {
     flex: 0 0 auto;
     display: flex;
     justify-content: center;
-    overflow: hidden; /* Ensure image doesn't overflow container */
-    height: 200px; /* Set a fixed height for uniformity */
+    overflow: hidden;
+    height: 200px; 
 }
 
 .event-image img {
     border-radius: 3%;
-    width: 100%; /* Ensure image fills container horizontally */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover entire container */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
 }
 
 
@@ -293,40 +293,40 @@ footer {
 .location-text {
     color: #ffffff;
     position: absolute;
-    top: 15px; /* Adjust as needed */
-    left: 15px; /* Adjust as needed */
+    top: 15px; 
+    left: 15px; 
     background-color:#0000002d;
-    padding: 5px; /* Adjust as needed */
+    padding: 5px; 
     border-radius: 3px;
     font-size: 12px;
 }
 .seeMore {
-    padding: 5px; /* Adjust as needed */
+    padding: 5px;
     font-size: 16px;
-    margin-top: auto; /* Push "See More" to the bottom */
-    text-align: center; /* Center align the text */
+    margin-top: auto; 
+    text-align: center; 
 }
 
 .seeMore hr {
     border: none;
-    border-top: 0.1px solid #6b6b6b6b; /* Thin line above the "See More" link */
-    margin: 0 auto; /* Center the line */
-    width: 90%; /* Adjust the width of the line */
+    border-top: 0.1px solid #6b6b6b6b; 
+    margin: 0 auto;
+    width: 90%; 
 }
 
 .seeMore p span {
-    margin-left: 156px; /* Adjust spacing between text and arrow */
+    margin-left: 156px; 
 }
-.event-details h3{    color: #000000; /* Set text color to black */
-    margin-top: 10px; /* Push "See More" to the bottom */
+.event-details h3{    color: #000000; 
+    margin-top: 10px; 
 }
 .seeMore p {
-    color: #9B3C8C; /* Set text color to black */
-    margin-top: 10px; /* Push "See More" to the bottom */
+    color: #9B3C8C; 
+    margin-top: 10px;
     font-weight: bold;
 
 
 }
 .events-container a {
-    text-decoration: none !important; /* Remove underline for anchor elements within .events-container */
+    text-decoration: none !important; 
 }
