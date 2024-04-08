@@ -15,8 +15,7 @@
 <script src="firebase.js"></script>
     <script>
         function adjustTextareaHeight() {
-            // Implement the logic to adjust the height of the textarea if needed
-            // For example:
+        
             var textarea = document.getElementById('comment');
             textarea.style.height = textarea.scrollHeight + '';
         }
@@ -30,7 +29,6 @@
   let currentIndex = 0;
   let comments = [];
 
-  // Function to update text element with current comment
   function updateText() {
     if (comments.length > 0) {
       textElement.textContent = comments[currentIndex].comment;
@@ -39,10 +37,9 @@
     }
   }
 
-  // Fetch comments from Firebase and update comments array
   getComments();
 
-  // Left button event listener
+
   leftButton.addEventListener('click', () => {
     if (comments.length > 0) {
       currentIndex = (currentIndex - 1 + comments.length) % comments.length;
@@ -50,7 +47,7 @@
     }
   });
 
-  // Right button event listener
+
   rightButton.addEventListener('click', () => {
     if (comments.length > 0) {
       currentIndex = (currentIndex + 1) % comments.length;
@@ -58,7 +55,7 @@
     }
   });
 
-  // Function to fetch comments from Firebase
+
   function getComments() {
     var commentsRef = database.ref('comments');
     commentsRef.once('value', function (snapshot) {
